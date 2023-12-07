@@ -10,16 +10,16 @@ def admin_login (username,password):
 #print(access)
 
 def hows_the_weather(temperature):
-    if temperature < 40:
-        response = "brisk"
-    elif temperature >= 40 and temperature <= 65:
-        response = "a little chilly"
-    elif temperature > 85:
-        response = "too dang hot"
-    else:
-        response = "perfect"
-  
-    return (f"It's {response} out here")
+   responce = (
+       "brisk" if temperature < 40 else
+       "a little chilly" if temperature >= 40 and temperature <= 65 else
+       "too dang hot" if temperature > 85 else
+       "perfect"
+   )
+   return f"It's {responce} out here!"
     
 today = hows_the_weather(45)
 print(today)
+
+
+
